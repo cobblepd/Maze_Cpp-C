@@ -1,0 +1,14 @@
+-rootPath
+C:/A1_Maze_CPP-1
+-cmake-output
+-output-file
+C:/A1_Maze_CPP-1/build/.qt/qml_imports/appMaze_build.cmake
+-importPath
+C:/A1_Maze_CPP-1/build/Maze
+-importPath
+C:/A1_Maze_CPP-1/build
+-importPath
+C:/Qt/6.9.3/mingw_64/qml
+-qrcFiles
+C:/A1_Maze_CPP-1/build/.qt/rcc/qmake_Maze.qrc
+C:/A1_Maze_CPP-1/build/.qt/rcc/appMaze_raw_qml_0.qrc
