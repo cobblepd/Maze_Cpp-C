@@ -2,4 +2,4 @@
 
 Implementation of the Maze project.
 
-![Maze](misc/images/A1_Maze.JPG)
+![Maze](images/A1_Maze.JPG)
