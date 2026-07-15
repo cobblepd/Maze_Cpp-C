@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/qt/qml/Maze">C:/A1_Maze_CPP-1/build/Maze</file>
-
-  </qresource>
-</RCC>

@@ -1,6 +1,0 @@
-module Maze
-typeinfo appMaze.qmltypes
-prefer :/qt/qml/Maze/
-Main 254.0 src/qml/Main.qml
-depends QtQuick
-

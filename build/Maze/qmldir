@@ -1,9 +1,0 @@
-module Maze
-typeinfo appMaze.qmltypes
-prefer :/qt/qml/Maze/
-Main 254.0 src/qml/Main.qml
-singleton Color 254.0 src/qml/style/Color.qml
-Wrapper 254.0 src/qml/components/Wrapper.qml
-AppButton 254.0 src/qml/ui-kit/AppButton.qml
-depends QtQuick
-

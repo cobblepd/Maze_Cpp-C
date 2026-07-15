@@ -1,8 +1,0 @@
---resource
-C:/A1_Maze_CPP-1/build/.qt/rcc/qmake_Maze.qrc
---resource
-C:/A1_Maze_CPP-1/build/.qt/rcc/appMaze_raw_qml_0.qrc
-/qt/qml/Maze/src/qml/Main.qml
-/qt/qml/Maze/src/qml/style/Color.qml
-/qt/qml/Maze/src/qml/components/Wrapper.qml
-/qt/qml/Maze/src/qml/ui-kit/AppButton.qml
