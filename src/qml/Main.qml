@@ -25,35 +25,43 @@ ApplicationWindow {
         Wrapper {
             id: rectangle1
             lightMode:window.lightMode
-            width: 220
-            height: parent.height
+            // Фиксированная ширина панели
+            Layout.preferredWidth: 220
+            Layout.minimumWidth: 220
+            Layout.maximumWidth: 220
+
+            // Вся доступная высота GridLayout
+            Layout.fillHeight: true
             contentPadding: 16
             contentSpacing: 8
 
             AppButton{
-                text:"HELLO"
+                text:"Лабиринт"
                 lightMode: window.lightMode
-                icon.source: "qrc:/qt/qml/Maze/images/x.png"
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
+                //icon.source: "qrc:/qt/qml/Maze/images/x.png"
             }
 
             AppButton{
-                text:"HELLO"
+                text:"Пещеры"
                 lightMode: window.lightMode
-                icon.source: "qrc:/qt/qml/Maze/images/x.png"
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
+                //icon.source: "qrc:/qt/qml/Maze/images/x.png"
             }
-            AppButton{
-                text:"HELLO"
-                lightMode: window.lightMode
-                icon.source: "qrc:/qt/qml/Maze/images/x.png"
-            }
-            AppButton{
-                text:"HELLO"
-                lightMode: window.lightMode
-                icon.source: "qrc:/qt/qml/Maze/images/x.png"
-            }
+
             Item {
                 Layout.fillHeight: true
                }
+
+            /*AppButton{
+                text:"Настрйоки"
+                lightMode: window.lightMode
+                Layout.fillWidth: true
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
+                //icon.source: "qrc:/qt/qml/Maze/images/x.png"
+            }*/
 
             AppButton{
                 text: window.lightMode ? qsTr("\u263D  Dark mode")
@@ -64,30 +72,6 @@ ApplicationWindow {
                 //icon.source: "qrc:/qt/qml/Maze/images/x.png"
                 onClicked: window.lightMode = !window.lightMode
             }
-            Button {
-                id: button2
-                text: window.lightMode ? qsTr("\u263D  Dark mode")
-                                       : qsTr("\u263C  Light mode")
-                Layout.bottomMargin: 16
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
-
-                contentItem: Text {
-                    text: button2.text
-                    color: window.lightMode ? Color.light : Color.dark
-                    font: button2.font
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-
-                background: Rectangle {
-                    implicitWidth: 120
-                    implicitHeight: 36
-                    radius: 8
-                    color: window.lightMode ? Color.dark : Color.light
-                }
-
-                onClicked: window.lightMode = !window.lightMode
-            }
         }
 
         Rectangle {
@@ -95,37 +79,6 @@ ApplicationWindow {
             color: window.lightMode ? Color.light : Color.dark
             Layout.fillHeight: true
             Layout.fillWidth: true
-
-            ColumnLayout {
-                anchors.fill: parent
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-
-                Button {
-                    id: button1
-                    text: window.lightMode ? qsTr("\u263D  Dark mode")
-                                           : qsTr("\u263C  Light mode")
-                    Layout.bottomMargin: 16
-                    Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
-
-                    contentItem: Text {
-                        text: button1.text
-                        color: window.lightMode ? Color.light : Color.dark
-                        font: button1.font
-                        horizontalAlignment: Text.AlignHCenter
-                        verticalAlignment: Text.AlignVCenter
-                    }
-
-                    background: Rectangle {
-                        implicitWidth: 120
-                        implicitHeight: 36
-                        radius: 8
-                        color: window.lightMode ? Color.dark : Color.light
-                    }
-
-                    onClicked: window.lightMode = !window.lightMode
-                }
-
-            }
         }
     }
 
