@@ -1,3 +1,4 @@
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls.Basic
@@ -100,6 +101,7 @@ ApplicationWindow {
             RowLayout{
                 spacing: 4
                 AppInput{
+                    id: mazeHeight
                     labelText: "Высота"
 
                     Layout.fillWidth: true
@@ -107,6 +109,7 @@ ApplicationWindow {
                     Layout.maximumHeight: implicitHeight
                 }
                 AppInput{
+                    id: mazeWidth
                     labelText:"Ширина"
 
                     Layout.fillWidth: true
@@ -117,6 +120,12 @@ ApplicationWindow {
             AppButton{
                 lightMode: window.lightMode
                 text:"Генерация"
+                onClicked:{
+                    const cols = Number(mazeWidth.text)
+                    const rows = Number(mazeHeight.text)
+
+                    console.log(cols, rows)
+                }
             }
 
 
