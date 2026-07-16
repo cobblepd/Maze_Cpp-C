@@ -31,6 +31,7 @@ qt_add_qml_module(appMaze
         src/qml/style/Color.qml
         src/qml/components/Wrapper.qml
         src/qml/ui-kit/AppButton.qml
+        src/qml/ui-kit/AppInput.qml
     RESOURCES 
         images/x.png
 )
