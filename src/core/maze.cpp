@@ -33,6 +33,45 @@ bool Maze::validCeil(int rows, int cols){
     return rows >= 0 && rows < rows_ && cols >= 0 && cols < columns_;
 }
 
+bool Maze::hasRightWall(int row, int cols){
+    if(!validCeil(row, cols)){
+        throw std::out_of_range("Invalid ceil position");
+    }
+    return right_walls[row][cols];
+}
+
+bool Maze::hasBottomWall(int row, int cols){
+    if(!validCeil(row, cols)){
+        throw std::out_of_range("Invalid ceil position");
+    }
+    return bottom_walls[row][cols];
+}
+
+bool Maze::hasLefttWall(int row, int cols){
+    if(!validCeil(row, cols)){
+        throw std::out_of_range("Invalid ceil position");
+    }
+
+    if(cols == 0){
+        return true;
+    }
+
+    return right_walls[row][cols - 1];
+}
+
+
+bool Maze::hasTopWall(int row, int cols){
+    if(!validCeil(row, cols)){
+        throw std::out_of_range("Invalid ceil position");
+    }
+
+    if(row == 0){
+        return true;
+    }
+
+    return bottom_walls[row - 1][cols];
+}
+
 void Maze::setRightWall(int row, int cols, bool value){
     if(!validCeil(row, cols)){
         throw std::out_of_range("Invalid ceil position");

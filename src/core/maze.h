@@ -10,8 +10,14 @@ public:
     bool validSize(int rows, int cols);
     bool validCeil(int rows, int cols);
 
+    bool hasRightWall(int row, int cols);
+    bool hasBottomWall(int row, int cols);
+    bool hasLefttWall(int row, int cols);
+    bool hasTopWall(int row, int cols);
+
     void setRightWall(int row, int cols, bool value);
     void setBottomWall(int row, int cols, bool value);
+
     void printMaze();
 private:
     int rows_ = 0;
